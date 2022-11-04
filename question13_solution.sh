@@ -6,7 +6,7 @@ if test -f "Archive.zip"; then
     NEWCHECK=$(shasum -a 256 Archive.zip)
     echo -e
     echo $NEWCHECK
-    if [[ $CHECK==$NEWCHECK ]]; then
+    if [[ "$CHECK"=="$NEWCHECK" ]]; then
         echo "FILES VERIFIED"
     else
         echo "FILES CHECKSUM DON'T MATCH"
